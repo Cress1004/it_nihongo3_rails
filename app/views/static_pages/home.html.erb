@@ -1,2 +1,9 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+
+<%if !current_user %>
+<%= link_to 'サインイン',  new_user_session_path, method:'GET'  %>
+<%= link_to 'ユーザ登録', new_user_session_path, method:'GET' %>
+<%elsif%>
+<%=current_user.email%>
+<%= link_to 'サインアウト', destroy_user_session_path, method:'DELETE' %>
+<%end%>
+<h1>HOME PAGE</h1>
