@@ -1,6 +1,4 @@
-<%if user_signed_in? %>
-<%= link_to 'ホーム', static_pages_home_path, method: 'GET' %>
-<%end%>
+<p id="notice"><%= notice %></p>
 <%if !user_signed_in? %>
 <%= link_to 'サインイン',  new_user_session_path, method:'GET'  %>
 <%= link_to 'ユーザ登録', new_user_session_path, method:'GET' %>
