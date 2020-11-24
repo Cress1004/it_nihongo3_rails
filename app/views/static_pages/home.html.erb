@@ -1,5 +1,7 @@
-
-<%if !current_user %>
+<%if user_signed_in? %>
+<%= link_to 'ホーム', static_pages_home_path, method: 'GET' %>
+<%end%>
+<%if !user_signed_in? %>
 <%= link_to 'サインイン',  new_user_session_path, method:'GET'  %>
 <%= link_to 'ユーザ登録', new_user_session_path, method:'GET' %>
 <%elsif%>
@@ -7,3 +9,7 @@
 <%= link_to 'サインアウト', destroy_user_session_path, method:'DELETE' %>
 <%end%>
 <h1>HOME PAGE</h1>
+<%if user_signed_in? %>
+<%= link_to '本一覧を見る',  books_path, method:'GET' %>
+<%end%>
+
