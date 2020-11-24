@@ -3,7 +3,7 @@
 <%= link_to 'サインイン',  new_user_session_path, method:'GET'  %>
 <%= link_to 'ユーザ登録', new_user_session_path, method:'GET' %>
 <%elsif%>
-<%=current_user.email%>
+<p>こんにちは<%=link_to current_user.email, users_show_path%></p>
 <%= link_to 'サインアウト', destroy_user_session_path, method:'DELETE' %>
 <%end%>
 <h1>HOME PAGE</h1>

@@ -1,0 +1,6 @@
+<%= link_to 'ホーム', static_pages_home_path %>
+<p>こんにちは<%=link_to current_user.email, users_show_path%></p>
+<%= link_to 'サインアウト', destroy_user_session_path, method:'DELETE' %>
+
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
