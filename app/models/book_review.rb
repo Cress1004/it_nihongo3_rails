@@ -1,4 +1,3 @@
 class BookReview < ApplicationRecord
-    has_many :users
-    has_many :books
+    belongs_to :user
 end
